@@ -1,3 +1,5 @@
+from flask import Flask
+app = Flask(__name__)
 import yagmail
 from flask import Flask, render_template, request, redirect, session, send_from_directory
 import sqlite3
@@ -200,9 +202,5 @@ from flask import session, redirect, url_for
 def logout():
     session.clear()   # session remove karega
     return redirect(url_for('login'))  # login page pe bhej dega
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug=True)
-    if __name__ == "__main__":
-    app.run()
-    web: gunicorn app:app
-    app = Flask(__name__)
